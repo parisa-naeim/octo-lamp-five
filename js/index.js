@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     start.style.display = 'none';
     setInterval(countdown, 1000);
   });
-  
+
 
 
 
@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (quizItem.a == i) {
           //change background color of li element here
-          liElement.style.backgroundColor = "blue";
+          liElement.style.backgroundColor = "rgb(160,194,166)";
           if (radioElement.checked) {
             // code for task 1 goes here
             score++;
@@ -128,6 +128,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-  
+
 
 });
