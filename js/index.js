@@ -107,4 +107,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const submit = document.getElementById('btnSubmit');
   submit.addEventListener('click', calculateScore);
+  
+  function resetButton() {
+    location.reload();
+  }
+  const reset = document.getElementById('btnReset');
+  reset.addEventListener('click', resetButton);
 });
