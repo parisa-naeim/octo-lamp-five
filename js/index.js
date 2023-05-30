@@ -25,6 +25,10 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#quizBlock').style.display = 'block';
     start.style.display = 'none';
   });
+
+
+
+
   // quizArray QUESTIONS & ANSWERS
   // q = QUESTION, o = OPTIONS, a = CORRECT ANSWER
   // Basic ideas from https://code-boxx.com/simple-javascript-quiz/
@@ -76,15 +80,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (quizItem.a == i) {
           //change background color of li element here
-        }
-
-        if (radioElement.checked) {
-          // code for task 1 goes here
+          liElement.style.backgroundColor = "blue";
+          if (radioElement.checked) {
+            // code for task 1 goes here
+            score++;
+          }
         }
       }
     });
+    console.log('score:' + score);
   };
 
   // call the displayQuiz function
   displayQuiz();
+
+  const submit = document.getElementById('btnSubmit');
+  submit.addEventListener('click', calculateScore);
 });
