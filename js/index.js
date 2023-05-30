@@ -24,7 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
   start.addEventListener('click', function (e) {
     document.querySelector('#quizBlock').style.display = 'block';
     start.style.display = 'none';
+    setInterval(countdown, 1000);
   });
+  
 
 
 
@@ -107,10 +109,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const submit = document.getElementById('btnSubmit');
   submit.addEventListener('click', calculateScore);
-  
+
   function resetButton() {
     location.reload();
   }
   const reset = document.getElementById('btnReset');
   reset.addEventListener('click', resetButton);
+
+  // set timeout
+  const timer = document.querySelector('#time');
+
+
+  function countdown() {
+    if (timer.innerHTML > 0) {
+      timer.innerHTML = timer.innerHTML - 1;
+      if (timer.innerHTML === '0') {
+        calculateScore()
+      }
+    }
+  }
+  
+
 });
