@@ -48,6 +48,16 @@ window.addEventListener('DOMContentLoaded', () => {
       o: ['Sydney', 'Canberra', 'Melbourne', 'Perth'],
       a: 1,
     },
+    {
+      q: 'which of these chemical elements is not Halogen?',
+      o: ['Fluorine', 'Chlorine', 'Neon', 'Bromine'],
+      a: 2,
+    },
+    {
+      q: 'You cannot live without water! What is its chemical formula?',
+      o: ['H2', 'O2', 'H2O', 'H2O2'],
+      a: 2,
+    }
   ];
 
   // function to Display the quiz questions and answers from the object
