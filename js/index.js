@@ -108,7 +108,11 @@ window.addEventListener('DOMContentLoaded', () => {
   displayQuiz();
 
   const submit = document.getElementById('btnSubmit');
-  submit.addEventListener('click', calculateScore);
+  submit.addEventListener('click', () => {
+    calculateScore();
+    timer.innerHTML = '0';
+  });
+
 
   function resetButton() {
     location.reload();
