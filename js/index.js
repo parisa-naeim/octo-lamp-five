@@ -88,7 +88,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-    console.log('score:' + score);
+    // console.log('score:' + score);
+    document.getElementById('score').innerHTML = 'score: ' + score;
   };
 
   // call the displayQuiz function
